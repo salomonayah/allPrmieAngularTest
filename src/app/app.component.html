@@ -1,0 +1,36 @@
+<!-- <div class="outer-wrapper" igxLayout>
+  <igx-nav-drawer #nav id="project-menu" isOpen="true" [enableGestures]='true' width="280px">
+    <ng-template igxDrawer>
+      <span igxDrawerItem [isHeader]="true">Views</span>
+      <span *ngFor="let route of topNavLinks" igxDrawerItem igxRipple 
+      routerLinkActive="igx-nav-drawer__item--active" 
+      routerLink="{{route.path}}">{{route.name}}</span>
+    </ng-template>
+  </igx-nav-drawer> -->
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">ALL_PRIME_TECH_TEST |</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"  *ngFor="let route of topNavLinks" >
+            <a class="nav-link" routerLink="{{route.path}}"><span> {{route.name}}  |</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <main role="main">
+    <div class="container uiContent m-t-10">
+      <div class="content" igxFlex>
+        <router-outlet></router-outlet>
+       </div>
+    </div>
+  </main>
+
+  
+ 
