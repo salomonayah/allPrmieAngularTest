@@ -7,7 +7,7 @@ const providers: Provider[] = [];
 
 if (!isDevMode()) {
   // register prod error handler
-  providers.push({ provide: ErrorHandler, useClass: GlobalErrorHandlerService });
+  //providers.push({ provide: ErrorHandler, useClass: GlobalErrorHandlerService });
 }
 
 @NgModule({
